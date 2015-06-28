@@ -41,6 +41,7 @@ body{
     padding: 0px;
     margin: 0px;
 }
+textarea { resize:none; }
 .icon{
     color: #3B70BF;
 }
@@ -85,7 +86,7 @@ body{
     border-radius: 10px;
 }
 .help{
-    font-family: "Bebas Neue Bold", sans-serif;
+    font-family: sans-serif; /*'.help'*/
     z-index: 10;
     font-size: 40px;
     transform: translate(-50%, -50%);
@@ -106,7 +107,7 @@ body{
 }
 .help > p{
     position: absolute;
-    top: 54%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
 }
@@ -122,6 +123,12 @@ body{
     left: 92.5%;
     font-size: 20px;
     z-index: 10;
+}
+.messenger-form{
+    margin: 10%;
+}
+#messenger-submit{
+    background-color: #3B70BF;
 }
 
 
