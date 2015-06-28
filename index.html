@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12" id="shadow">
         </div>
-        <div class="help inactive" id="help">
+        <div class="help inactive" id="help" draggable="true">
             <p class="help-text">?</p>
             
             <div class="helpbox" id="helpbox">
@@ -37,15 +37,40 @@
                         <input type="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                     <textarea class="form-control" rows="5" id="message" placeholder="Message" required></textarea>
-                    <button type="submit" id="messenger-submit" class="btn btn-success btn-lg btn-block">SEND</button>
+                    <!--add btn-primary if needed-->
+                    <button type="submit" id="messenger-submit" class="btn  btn-lg btn-block">SEND</button>
                 </div>
                     
             </div>
         </div>
-
-<!--      <footer>
-        <p>&copy; Mike Fix 2015</p>
-      </footer>-->
+        <script>
+            //TODO fix cursor
+            function drag_start(event) {
+                var style = window.getComputedStyle(event.target, null);
+                event.dataTransfer.setData("text/plain",
+                (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+           } 
+           function drag_over(event) { 
+                event.preventDefault(); 
+                return false; 
+            } 
+           function drop(event) { 
+                var offset = event.dataTransfer.getData("text/plain").split(',');
+                var dm = document.getElementById('help');
+                dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+                dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+                event.preventDefault();
+                return false;
+            } 
+            var dm = document.getElementById('help'); 
+            dm.addEventListener('dragstart',drag_start,false); 
+            document.body.addEventListener('dragover',drag_over,false); 
+            document.body.addEventListener('drop',drop,false); 
+        </script>
+        
+<!--    <footer>
+            <p>&copy; Mike Fix 2015</p>
+        </footer>-->
 
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>-->
         <script>window.jQuery || document.write('<script src="public_html/js/vendor/jquery-1.11.2.js"><\/script>');</script>
@@ -53,15 +78,5 @@
         <script src="public_html/js/vendor/bootstrap.min.js"></script>
 
         <script src="public_html/js/main.js"></script>
-        
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments);});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r);}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>-->
     </body>
 </html>

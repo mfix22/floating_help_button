@@ -8,7 +8,7 @@
     .help{
         position: fixed;
         top: 90%;
-        left: 85%;
+        left: 90%;
     }
     .icon{
         font-size:30px;
@@ -18,8 +18,8 @@
 @media(min-width: 992px){
     .help{
         /*TODO this is a test, change back to 50*/
-        left: 80%;
-        top: 85%;
+        left: 90%;
+        top: 90%;
         position: absolute;
     }
     .title span{
@@ -129,6 +129,8 @@ textarea { resize:none; }
 }
 #messenger-submit{
     background-color: #3B70BF;
+    color: white;
+    margin-top: 15px;
 }
 
 

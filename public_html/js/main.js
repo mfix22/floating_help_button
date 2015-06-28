@@ -15,28 +15,35 @@
 //         $('#helpbox').show();
 //     });
 // };
+var topC;
+var leftC;
+
 var close = function(){
+    var h = $('.help');
     $('#helpbox').hide();
     $('#shadow').hide();
-    $('.help').animate({
-        top: '85%',
-        left: '80%',
+    h.animate({
+        top: topC,
+        left: leftC,
         width: '50px',
         height: '50px'
     }, function(){
-        $('.help').removeClass('active');
-        $('.help').addClass('inactive');
+        h.removeClass('active');
+        h.addClass('inactive');
         $('.help-text').show();
-        $('.help').bind("click", open);
+        h.bind("click", open);
     });
 };
 var open = function(){
-    $('.help').unbind("click");
+    var h = $('.help');
+    topC = h.css("top");
+    leftC = h.css("left");
+    h.unbind("click");
     $('#shadow').show();
     $('.help-text').hide();
-    $('.help').addClass('active');
-    $('.help').removeClass('inactive');
-    $('.help').animate({
+    h.addClass('active');
+    h.removeClass('inactive');
+    h.animate({
         top: '50%',
         left: '50%',
         width: '500px',
