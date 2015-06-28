@@ -17,7 +17,8 @@
 /*TODO fix this so it only has 1 query*/
 @media(min-width: 992px){
     .help{
-        left: 50%;
+        /*TODO this is a test, change back to 50*/
+        left: 80%;
         top: 85%;
         position: absolute;
     }
@@ -44,71 +45,31 @@ body{
     color: white;
 }
 .icon:hover{
-    color: #EA0B8C 
+    color: #3B70BF 
 }
 #main{
     position: relative;
-    background-color: #2E3238;
+    background-color: #3B70BF;/*#2E3238;*/
     height: 100vh;
     /*width: 50%;*/
 }
-#lyft{
-    position: relative;
-    background-color: #EA0B8C;
-    height: 100vh;
-    /*width: 50%;*/
+#shadow{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: black;
+    opacity: 0.5;
 }
 
-.logo{
+/*.logo{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.codeuber{
-/*    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;*/
-    color: white;
-    font-size: 28px;
-    border-color: white;
-    border-style: dotted;
-    border-width: 4px;
-    text-align: center;
-    padding: 0px 10px;
-    
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.codelyft{
-/*    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;*/
-    padding: 0px 10px;
-    color: white;
-    font-size: 28px;
-    border-color: white;
-    border-style: dotted;
-    border-width: 4px;
-    text-align: center;
-    
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.codeuber:hover{
-    border-color: #EA0B8C;
-    cursor:pointer;
-}
-.codelyft:hover{
-    border-color: #070716;
-    cursor:pointer;
-}
+}*/
+
 .title{
     font-family: "Bebas Neue Bold", sans-serif;
     text-align: center;
@@ -118,7 +79,10 @@ body{
     left: 51.5%;
     transform: translate(-50%);
     top: 0vh;
-    color: #EA0B8C
+    color: #3B70BF
+}
+.help.active{
+    border-radius: 10px;
 }
 .help{
     font-family: "Bebas Neue Bold", sans-serif;
@@ -132,19 +96,22 @@ body{
     width: 50px;
     height: 50px;
 }
-.help:hover{
+.help.inactive:hover{
     margin-top: -1px;
     width:52px;
     height:52px;
     cursor: pointer;
 
-    color: #EA0B8C;
+    color: #3B70BF;
 }
 .help > p{
     position: absolute;
     top: 54%;
     left: 50%;
     transform: translate(-50%, -50%)
+}
+.helpbox{
+    display: none;
 }
 
 
