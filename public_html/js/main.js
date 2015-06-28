@@ -1,42 +1,40 @@
-//$("#ubercode").click(function(){
-//    var r = document.createRange();
-//    var w=$("#ubercode");
-//    r.selectNodeContents(w); 
-//    var sel=window.getSelection(); 
-//    sel.removeAllRanges(); 
-//    sel.addRange(r);
-//});
 // $('[data-toggle="tooltip"]').tooltip();
-$('.help').click(function(){
-    $('#shadow').show();
-    $('.help-text').hide();
-    $(this).addClass('active');
-    $(this).removeClass('inactive');
-    $(this).animate({
-        top: '25%',
-        left: '50%',
-        width: '500px',
-        height: '300px'
-    });
-});
-$('#shadow').click(function(){
+var close = function(){
+    $('#helpbox').hide();
     $('#shadow').hide();
-    $('.help-text').show();
     $('.help').animate({
         top: '85%',
         left: '80%',
         width: '50px',
         height: '50px'
+    }, function(){
+        $('.help').removeClass('active');
+        $('.help').addClass('inactive');
+        $('.help-text').show();
     });
-    $('.help').removeClass('active');
-    $('.help').addClass('inactive');
-    //TODO change class thing to a classback
+};
+var open = function(elem){
+    $('#shadow').show();
+    $('.help-text').hide();
+    $(elem).addClass('active');
+    $(elem).removeClass('inactive');
+    $(elem).animate({
+        top: '50%',
+        left: '50%',
+        width: '500px',
+        height: '300px'
+    }, function(){
+        //Maybe don't make this a callback
+        $('#helpbox').show();
+    });
+};
+$('.help.inactive').click(function(){
+    open(this);
 });
+$('#shadow').click(function(){
+    close();
+});
+// $('#x').click(function(){
+//     close();
+// })
 
-// $('#ubercode').click(function(){
-//     $('#ubercode').tooltip('show');
-//     $('#lyftcode').tooltip('hide');
-// });
-// $(window).scroll(function(){
-//     $('.tooltip').css('position', 'fixed');
-// });
