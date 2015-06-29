@@ -80,6 +80,9 @@ function set(myOptions){
     if (myOptions.top != null){
         h.css("top", myOptions.top);
     }
+    if (myOptions.left != null){
+        h.css("left", myOptions.top);
+    }
 }
 //Dragging scripts
 //TODO fix cursor
