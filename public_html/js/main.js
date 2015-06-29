@@ -1,20 +1,3 @@
-// $('[data-toggle="tooltip"]').tooltip();
-// var open = function(elem){
-//     $(elem).unbind("click");
-//     $('#shadow').show();
-//     $('.help-text').hide();
-//     $(elem).addClass('active');
-//     $(elem).removeClass('inactive');
-//     $(elem).animate({
-//         top: '50%',
-//         left: '50%',
-//         width: '500px',
-//         height: '300px'
-//     }, function(){
-//         //Maybe don't make this a callback
-//         $('#helpbox').show();
-//     });
-// };
 var send_option = null;
 var topC;
 var leftC;
