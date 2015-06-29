@@ -25,7 +25,8 @@ Within the `.help.inactive` div, add a `<p class="help-text"></p>` with text or 
 Within the `.help.inactive` div, ad a `<div class="helpbox" id="helpbox"></div>` with the elements you want hidden until the button has been pressed
 
 Basic form example:
-```html<div class="helpbox">
+```html
+<div class="helpbox">
     <i class="icon ion-close-round x"></i>
     <div class="help-form">
         <div class="form-group">
@@ -39,7 +40,8 @@ Basic form example:
 
 ## Options
 You can customize the position, colors, and more by passing the options as so: 
-```js<script>
+```js
+<script>
 	var options = {
         draggable : false,
         top: '50%',
@@ -66,7 +68,8 @@ Make sure to place this script ##after## your link to `help.js`.
  background_color| string    | _#3B70BF_   | Used as the background color of the help button
 
 ##Example
-```html<head>
+```html
+<head>
 	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
 </head>
 <body>
