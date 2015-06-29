@@ -54,7 +54,7 @@ var options = {
 set(options);
 ```
 
-Make sure to place this script ~~after~~ your link to `help.js`.
+Make sure to place this script **after** your link to `help.js`.
 
  Name          | Type        | Default     | Description 
  ------------- | ----------- | ----------- | ----------- 
@@ -63,7 +63,7 @@ Make sure to place this script ~~after~~ your link to `help.js`.
  left          | string      | _90%_       | Sets position of button from top
  send          | function    | _null_      | This function is called by the button with class `.help-submit`
  color         | string      | _#3B70BF_   | Used to color features of the help button
- background_color| string    | _#3B70BF_   | Used as the background color of the help button
+ background_color| string    | _white_   | Used as the background color of the help button
 
 ##Example
 ```html
