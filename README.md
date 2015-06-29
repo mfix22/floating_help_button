@@ -12,7 +12,7 @@ Link the css and js files to your page
 ...
 <script src="js/help.js"></script>
 ```
-Bower install coming soon!
+**Bower install coming soon!**
 
 ## Usage
 Add a div with a `.help.inactive` class to your page.
