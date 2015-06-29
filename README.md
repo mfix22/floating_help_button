@@ -108,7 +108,8 @@ Make sure to place this script **after** your link to `help.js`.
 
 
 I created the form seen in the example `index.html` thanks to [Bootstrap](http://getbootstrap.com/) and [Ionicons](http://ionicons.com/) if you want to recreate this example!:
-```html<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
 ```
 ---
