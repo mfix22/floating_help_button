@@ -30,23 +30,30 @@
                         <input type="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                     <textarea class="form-control" rows="5" id="message" placeholder="Message" required></textarea>
-                    <button type="submit" id="messenger-submit" class="btn  btn-lg btn-block">SEND</button>
+                    <button type="submit" id="help-submit" class="btn  btn-lg btn-block">SEND</button>
                 </div>
                     
             </div>
         </div>
         
-        <script>
-            var options = {
-                draggable : false,
-                top: '50%',
-                left: '50%'
-            }
-            main.set(options);
-        </script>
         <!--<footer> <p>&copy; Mike Fix 2015</p></footer>-->
         <script>window.jQuery || document.write('<script src="public_html/js/vendor/jquery-1.11.2.js"><\/script>');</script>
         <script src="public_html/js/vendor/bootstrap.min.js"></script>
         <script src="public_html/js/main.js"></script>
+        
+        <!-- TODO fix so it does this before load-->
+        <script>
+            var options = {
+                draggable : false,
+                top: '50%',
+                left: '50%',
+                send: function(){
+                    alert("Hello");
+                },
+                color: "green",
+                background_color: "yellow"
+            };
+            set(options);
+        </script>
     </body>
 </html>

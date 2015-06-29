@@ -15,11 +15,7 @@
 //         $('#helpbox').show();
 //     });
 // };
-var options = {
-    draggable : true,
-    color : '#3B70BF',
-    send : null 
-};
+var send_option = null;
 var topC;
 var leftC;
 $('.help').attr("draggable", "true");
@@ -61,9 +57,9 @@ var open = function(){
 $('.help.inactive').click(open);
 $('#shadow').click(close);
 $('.x').click(close);
-$('#messenger-submit').click(function(){
+$('#help-submit').click(function(){
     if (options.send != null){
-        options.send();
+        send_option();
     }
 });
 function set(myOptions){
@@ -72,16 +68,24 @@ function set(myOptions){
         
     // }
     if (myOptions.send != null){
-        options.send = myOptions.send;
+        send_option = myOptions.send;
     }
     if (myOptions.draggable != null){
-        h.attr("draggable",myOptions.draggable);
+        h.attr("draggable", myOptions.draggable);
     }
     if (myOptions.top != null){
         h.css("top", myOptions.top);
     }
     if (myOptions.left != null){
         h.css("left", myOptions.top);
+    }
+    if (myOptions.color != null){
+        h.css("color", myOptions.color);
+        $('#help-submit').css("background-color", myOptions.color);
+        $('.icon').css('color', myOptions.color);
+    }
+    if (myOptions.background_color != null){
+        h.css("background-color", myOptions.background_color);
     }
 }
 //Dragging scripts
@@ -107,8 +111,3 @@ var dm = document.getElementById('help');
 dm.addEventListener('dragstart',drag_start,false); 
 document.body.addEventListener('dragover',drag_over,false); 
 document.body.addEventListener('drop',drop,false); 
-
-
-    // var message = "mailto:mrfix84@gmail.com?subject=hello&body=";
-    // message += document.getElementById("message").value;
-    // window.open(message, '_blank');

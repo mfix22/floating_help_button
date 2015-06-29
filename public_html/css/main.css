@@ -4,28 +4,6 @@
    Author's custom styles
    ========================================================================== */
   /* Medium devices (desktops, 992px and up) */
-@media(max-width: 992px){
-    .help{
-        position: fixed;
-        top: 90%;
-        left: 90%;
-    }
-    .icon{
-        font-size:30px;
-    }
-}
-/*TODO fix this so it only has 1 query*/
-@media(min-width: 992px){
-    .help{
-        /*TODO this is a test, change back to 50*/
-        left: 90%;
-        top: 90%;
-        position: absolute;
-    }
-    .icon{
-        font-size: 40px;
-    }
-}
 
 body{
     padding: 0px;
@@ -34,6 +12,7 @@ body{
 textarea { resize:none; }
 .icon{
     color: #3B70BF;
+    font-size: 40px;
 }
 .icon:hover{
     cursor: pointer;
@@ -56,6 +35,9 @@ textarea { resize:none; }
     border-radius: 10px;
 }
 .help{
+    top: 90%;
+    left: 90%;
+    position: absolute;
     font-family: sans-serif; /*'.help'*/
     z-index: 10;
     font-size: 40px;
@@ -92,7 +74,7 @@ textarea { resize:none; }
 .help-form{
     margin: 10%;
 }
-#messenger-submit{
+#help-submit{
     background-color: #3B70BF;
     color: white;
     margin-top: 15px;
