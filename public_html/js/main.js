@@ -18,11 +18,11 @@
 var options = {
     draggable : true,
     color : '#3B70BF',
-    send : null   
-}
+    send : null 
+};
 var topC;
 var leftC;
-
+$('.help').attr("draggable", "true");
 var close = function(){
     var h = $('.help');
     $('#helpbox').hide();
@@ -60,8 +60,27 @@ var open = function(){
 };
 $('.help.inactive').click(open);
 $('#shadow').click(close);
-$('#x').click(close);
-
+$('.x').click(close);
+$('#messenger-submit').click(function(){
+    if (options.send != null){
+        options.send();
+    }
+});
+function set(myOptions){
+    var h = $('.help');
+    // if (myOptions.color != null){
+        
+    // }
+    if (myOptions.send != null){
+        options.send = myOptions.send;
+    }
+    if (myOptions.draggable != null){
+        h.attr("draggable",myOptions.draggable);
+    }
+    if (myOptions.top != null){
+        h.css("top", myOptions.top);
+    }
+}
 //Dragging scripts
 //TODO fix cursor
 function drag_start(event) {
@@ -85,9 +104,8 @@ var dm = document.getElementById('help');
 dm.addEventListener('dragstart',drag_start,false); 
 document.body.addEventListener('dragover',drag_over,false); 
 document.body.addEventListener('drop',drop,false); 
-// $('#messenger-submit').click(function(){
-//     var message = "mailto:mrfix84@gmail.com?subject=hello&body=";
-//     message += document.getElementById("message").value;
-//     window.open(message, '_blank');
-// });
 
+
+    // var message = "mailto:mrfix84@gmail.com?subject=hello&body=";
+    // message += document.getElementById("message").value;
+    // window.open(message, '_blank');
