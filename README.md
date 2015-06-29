@@ -1,3 +1,5 @@
+The floating help button is a **draggable** button that is _beyond easy_ to add to your page and works perfectly as a floating action button such as in your material design page. Oh, and it is also draggable (although you can also turn this feature off)!
+
 ## Getting Started
 
 ```bash
