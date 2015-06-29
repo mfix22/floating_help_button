@@ -54,8 +54,10 @@ var options = {
 set(options);
 ```
 
+
 Make sure to place this script **after** your link to `help.js`.
 
+### Option information
  Name          | Type        | Default     | Description 
  ------------- | ----------- | ----------- | ----------- 
  draggable     | boolean     | _true_      | Sets whether you want the button to be draggable or not
