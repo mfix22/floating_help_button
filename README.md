@@ -41,19 +41,17 @@ Basic form example:
 ## Options
 You can customize the position, colors, and more by passing the options as so: 
 ```js
-<script>
-	var options = {
-        draggable : false,
-        top: '50%',
-        left: '50%',
-        send: function(){
-            alert("Hello");
-        },
-        color: "blue",
-        background_color: "salmon"
-    };
-    set(options);
-</script>
+var options = {
+    draggable : false,
+    top: '50%',
+    left: '50%',
+    send: function(){
+        alert("Hello");
+    },
+    color: "blue",
+    background_color: "salmon"
+};
+set(options);
 ```
 
 Make sure to place this script ##after## your link to `help.js`.
