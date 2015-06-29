@@ -1,4 +1,4 @@
-The floating help button is a **draggable** button that is _beyond easy_ to add to your page and works perfectly as a floating action button for messaging, customer support, and more. Works great on your material design page. It is also draggable (although you can also turn this feature off)!
+The floating help button is a **draggable** button that is _beyond easy_ to add to your page and works perfectly as a floating action button for messaging, customer support, and more. Works great on your material design page. It is also draggable, although you can also turn this feature off.
 
 ## Getting Started
 
