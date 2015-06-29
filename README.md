@@ -54,7 +54,7 @@ var options = {
 set(options);
 ```
 
-Make sure to place this script ##after## your link to `help.js`.
+Make sure to place this script ~~after~~ your link to `help.js`.
 
  Name          | Type        | Default     | Description 
  ------------- | ----------- | ----------- | ----------- 
