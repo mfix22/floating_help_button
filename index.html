@@ -18,8 +18,7 @@
     <!--<div class="title">San <span>Diego</span></div>-->
         <div class="col-md-12 col-sm-12 col-xs-12" id="main">
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12" id="shadow">
-        </div>
+        <!--<div class="col-xs-12" id="shadow"></div>-->
         <div class="help inactive" id="help">
             <p class="help-text">?</p>
             
@@ -42,7 +41,17 @@
         <script src="public_html/js/main.js"></script>
         
         <!-- TODO fix so it does this before load-->
+        <!-- TODO dynamically add shadow element-->
         <script>
+            var options = {
+                color: "salmon",
+                send: function(){
+                    alert("HELLO");
+                }
+            };
+            set(options);
+        </script>
+        <!--<script>
             var options = {
                 draggable : false,
                 top: '50%',
@@ -50,10 +59,10 @@
                 send: function(){
                     alert("Hello");
                 },
-                color: "green",
-                background_color: "yellow"
+                color: "blue",
+                background_color: "salmon"
             };
             set(options);
-        </script>
+        </script>-->
     </body>
 </html>

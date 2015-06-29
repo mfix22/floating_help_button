@@ -19,6 +19,7 @@ var send_option = null;
 var topC;
 var leftC;
 $('.help').attr("draggable", "true");
+$("body").append('<div class="col-xs-12" id="shadow"></div>');
 var close = function(){
     var h = $('.help');
     $('#helpbox').hide();
