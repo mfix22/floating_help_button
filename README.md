@@ -16,7 +16,7 @@ Link the css and js files to your page
 ```
 
 ## Usage
-Add a div with a `.help.inactive` class to your page.
+Add a div with a `.help.inactive` class to your page. Add `id="help"` if you want your button to be draggable
 ```html
 <div class="help inactive"  id="help">
 ```
