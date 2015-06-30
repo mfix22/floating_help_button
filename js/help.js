@@ -5,7 +5,7 @@ $('.help').attr("draggable", "true");
 $("body").append('<div class="col-xs-12" id="shadow"></div>');
 var close = function(){
     var h = $('.help');
-    $('#helpbox').hide();
+    $('.helpbox').hide();
     $('#shadow').hide();
     h.animate({
         top: topC,
@@ -35,7 +35,7 @@ var open = function(){
         height: '300px'
     }, function(){
         //Maybe don't make this a callback
-        $('#helpbox').show();
+        $('.helpbox').show();
     });
 };
 $('.help.inactive').click(open);
@@ -48,9 +48,6 @@ $('#help-submit').click(function(){
 });
 function set(myOptions){
     var h = $('.help');
-    // if (myOptions.color != null){
-        
-    // }
     if (myOptions.send != null){
         send_option = myOptions.send;
     }
