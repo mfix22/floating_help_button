@@ -29,14 +29,19 @@ Within the `.help.inactive` div, ad a `<div class="helpbox"></div>` with the ele
 
 Basic form example:
 ```html
-<div class="helpbox"  id="help">
-    <i class="icon ion-close-round x"></i>
-    <div class="help-form">
-        <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Email" required>
+<div class="help inactive"  id="help">
+    <p class="help-text">?</p>
+    
+    <div class="helpbox">
+        <i class="icon ion-close-round x"></i>
+        <div class="help-form">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <textarea class="form-control" rows="5" id="message" placeholder="Message" required></textarea>
+            <button type="submit" id="help-submit" class="btn  btn-lg btn-block">SEND</button>
         </div>
-        <textarea class="form-control" rows="5" id="message" placeholder="Message" required></textarea>
-        <button type="submit" id="help-submit" class="btn btn-lg btn-block">SEND</button>
+            
     </div>
 </div>
 ```
@@ -91,6 +96,7 @@ Make sure to place this script **after** your link to `help.js`.
 	</div>
 	
 	...
+
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>');</script>
 	<script src="js/help.js"></script>
 	<script>
@@ -117,9 +123,9 @@ I created the form seen in the example `index.html` thanks to [Bootstrap](http:/
 ```
 
 ##Coming Soon
-*Bower install
-*Live dragging (with move cursor)
-*Ability to have multiple floating help buttons on a page (and no need for `id="help"`)
+- Bower install
+- Live dragging (with move cursor)
+- Ability to have multiple floating help buttons on a page (and no need for `id="help"`)
 ---
 
 [MIT License](https://github.com/mfix22/floating_help_button/blob/master/LICENSE)
