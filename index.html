@@ -34,12 +34,18 @@
         </div>
         
         <!--<footer> <p>&copy; Mike Fix 2015</p></footer>-->
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>');</script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>');</script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/help.js"></script>
+        <script src="js/jquery.browser.js"></script>
         
         <!-- TODO fix so it does this before load-->
         <script>
+            $('.help').draggable({
+                containment: 'parent',
+                cursor: 'move'
+            });
             var options = {
                 color: "salmon",
                 send: function(){
