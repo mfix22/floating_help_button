@@ -2,7 +2,7 @@ var send_option = null;
 var opened = false;
 var topC;
 var leftC;
-// $('.help').attr("draggable", "true");
+$('.help').attr("draggable", "true");
 $("body").append('<div class="col-xs-12" id="shadow"></div>');
 $("body").bind('keypress', function(e) {
     var code = e.keyCode || e.which;
