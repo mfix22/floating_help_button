@@ -1,9 +1,19 @@
 var send_option = null;
+var opened = false;
 var topC;
 var leftC;
 // $('.help').attr("draggable", "true");
 $("body").append('<div class="col-xs-12" id="shadow"></div>');
+$("body").bind('keypress', function(e) {
+    var code = e.keyCode || e.which;
+    if(code == 104 || code == 72) { //Enter keycode
+       if (!opened){
+           open();
+       }
+    }
+});
 var close = function(){
+    opened = false;
     var h = $('.help');
     $('.helpbox').hide();
     $('#shadow').hide();
@@ -20,6 +30,7 @@ var close = function(){
     });
 };
 var open = function(){
+    opened = true;
     var h = $('.help');
     topC = h.css("top");
     leftC = h.css("left");
@@ -36,6 +47,7 @@ var open = function(){
     }, function(){
         //Maybe don't make this a callback
         $('.helpbox').show();
+        $('#email').focus(); //TODO delete this
     });
 };
 $('.help.inactive').click(open);
@@ -71,24 +83,24 @@ function set(myOptions){
 }
 //Dragging scripts
 // //TODO fix cursor
-// function drag_start(event) {
-//     var style = window.getComputedStyle(event.target, null);
-//     event.dataTransfer.setData("text/plain",
-//     (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
-// } 
-// function drag_over(event) { 
-//     event.preventDefault(); 
-//     return false; 
-// } 
-// function drop(event) { 
-//     var offset = event.dataTransfer.getData("text/plain").split(',');
-//     var dm = document.getElementById('help');
-//     dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
-//     dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
-//     event.preventDefault();
-//     return false;
-// } 
-// var dm = document.getElementById('help'); 
-// dm.addEventListener('dragstart',drag_start,false); 
-// document.body.addEventListener('dragover',drag_over,false); 
-// document.body.addEventListener('drop',drop,false); 
+function drag_start(event) {
+    var style = window.getComputedStyle(event.target, null);
+    event.dataTransfer.setData("text/plain",
+    (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+} 
+function drag_over(event) { 
+    event.preventDefault(); 
+    return false; 
+} 
+function drop(event) { 
+    var offset = event.dataTransfer.getData("text/plain").split(',');
+    var dm = document.getElementById('help');
+    dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+    dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+    event.preventDefault();
+    return false;
+} 
+var dm = document.getElementById('help'); 
+dm.addEventListener('dragstart',drag_start,false); 
+document.body.addEventListener('dragover',drag_over,false); 
+document.body.addEventListener('drop',drop,false); 
