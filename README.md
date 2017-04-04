@@ -122,7 +122,7 @@ I created the form seen in the example `index.html` thanks to [Bootstrap](http:/
 <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
 ```
 
-##Coming Soon
+## Coming Soon
 - Bower install
 - Live dragging (with move cursor)
 - Ability to have multiple floating help buttons on a page (and no need for `id="help"`)
